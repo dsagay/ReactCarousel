@@ -5,22 +5,28 @@ var
 	// App state
 var state = {
   currentSlide: 0,
-  data        : data
+  data        : []
 }
-	
-	var Carousel = React.createClass({
+	 
+var Carousel = React.createClass({
   render: function() {
     return (
-      <div className="carousel">
-        <Slides data={state.data} />
-        <Pagination data={state.data} />
-        <Controls />
-      </div>
+	<div className="container">
+		<div className="row">
+			<div className="col-md-12">
+				  <div className="carousel">
+					<Slides data={this.props.data} />
+					<Pagination data={this.props.data} />
+					<Controls />
+				  </div>
+			</div>
+		</div>
+	</div>
     );
   }
 });
 
-// State transitions
+
 var actions = {
   toggleNext: function() {
     console.log("something worked");
@@ -56,14 +62,12 @@ var actions = {
   }
 }
 
-
-
 var Slides = React.createClass({
   render: function() {
     var slidesNodes = this.props.data.map(function (slideNode, index) {
     var isActive = state.currentSlide === index;
       return (
-        <Slide active={isActive} key={slideNode.id} imagePath={slideNode.imagePath} imageAlt={slideNode.imageAlt} title={slideNode.title} subtitle={slideNode.subtitle} text={slideNode.text} action={slideNode.action} actionHref={slideNode.actionHref} />
+        <Slide active={isActive} key={slideNode.img} imagePath={slideNode.img} text={slideNode.caption} />
       );
     });
     return (
@@ -84,10 +88,7 @@ var Slide = React.createClass({
     return (
       <div className={classStr}>
         <img src={this.props.imagePath} alt={this.props.imageAlt} />
-        <h2>{this.props.title}</h2>
-        <h3>{this.props.subtitle}</h3>
         <p>{this.props.text}</p>
-        <a href={this.props.actionHref}>{this.props.action}</a>
       </div>
     );
   }
@@ -103,8 +104,8 @@ var Controls = React.createClass({
   render: function() {
     return (
       <div className="controls">
-        <div className="toggle toggle--prev" onClick={this.togglePrev}>Prev</div>
-        <div className="toggle toggle--next" onClick={this.toggleNext}>Next</div>
+        <div className="toggle toggle--prev" onClick={this.togglePrev}>&#8592; </div>
+        <div className="toggle toggle--next" onClick={this.toggleNext}>&#8594; </div>
       </div>
     );
   }

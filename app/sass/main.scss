@@ -1,3 +1,73 @@
 @import 'config/vars';
 @import 'bootstrap/bootstrap';
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    font-size: 15px;
+}
+.carousel {
+    margin: 25px 0 0;
+}
+.slide {
+    display: none;
+}
+.slide p{
+	color: #555;
+	padding:10px;
+	font-size:22px;
+	text-align: right;
+}
+.slide img {
+	border-radius: 15px;
+}
+.pager {
+border-radius:10px;
+	border:1px solid #999;
+	
+    background-color: #e1e1e1;
+    display: inline-block;
+    height: 20px;
+    margin: 10px;
+    overflow: hidden;
+    text-indent: -9000px;
+    white-space: nowrap;
+    width: 20px;
+}
+.pager:hover {
+    background-color: #fa1;
+	cursor:pointer;
+}
+.controls {} .toggle {
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    padding: 10px 15px 17px;
+    position: absolute;
+    top: 38%;
+	curson:pointer;
+	font-size:40px;
+}
+.slideshow {} .slides {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
+.slide.slide--active {
+    display: block;
+}
+.toggle-prev {
+    left: 0;
+}
+.toggle--next {
+    right: 0;
+}
+.pagination {
+	display:block;
+    margin: 0 20px;
+    text-align: center;
+}
