@@ -1,50 +1,26 @@
-/*var carousel = {
-	items: [
-		{
-			img: "/assets/img/carousel-1.jpg",
-			caption: "Carousel title 1"
-		},
-		{
-			img: "/assets/img/carousel-2.jpg",
-			caption: "Carousel title 2"
-		},
-		{
-			img: "/assets/img/carousel-3.jpg",
-			caption: "Carousel title 3"
-		},
-		{
-			img: "/assets/img/carousel-4.jpg",
-			caption: "Carousel title 4"
-		},
-		{
-			img: "/assets/img/carousel-5.jpg",
-			caption: "Carousel title 5"
-		},
-	]
-}
-*/
+
 var carousel = [
 		{
 			img: "/assets/img/carousel-1.jpg",
-			caption: "Carousel title 1"
+			caption: "The domestic cat (Felis catus or Felis silvestris catus) is a small, usually furry"
 		},
 		{
 			img: "/assets/img/carousel-2.jpg",
-			caption: "Carousel title 2"
+			caption: "Cats are often valued by humans for companionship and their ability to hunt vermin."
 		},
 		{
 			img: "/assets/img/carousel-3.jpg",
-			caption: "Carousel title 3"
+			caption: "Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws"
 		},
 		{
 			img: "/assets/img/carousel-4.jpg",
-			caption: "Carousel title 4"
+			caption: "Despite being solitary hunters, cats are a social species and "
 		},
 		{
 			img: "/assets/img/carousel-5.jpg",
-			caption: "Carousel title 5"
+			caption: "Cats have a high breeding rate."
 		},
 ];
-carousel.currentState = 0;
+
 module.exports = carousel;
   
